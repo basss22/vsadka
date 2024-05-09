@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta de Amor</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.pinimg.com/564x/16/2d/54/162d54d259a71cb6926d91b834160526.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .carta {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+  }
+  .carta h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    color: #c03333;
+    text-align: center;
+  }
+  .carta p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+  }
+  .corazon {
+    position: fixed;
+    top: -2em;
+    background-image: url('https://img1.picmix.com/output/stamp/normal/5/4/3/2/442345_c9d58.gif');
+    width: 2em;
+    height: 1.8em;
+    background-size: cover;
+    animation: caida 5s infinite;
+  }
+  /* Animación para la caída de los corazones */
+  @keyframes caida {
+    0% { top: -2em; }
+    100% { top: 100%; }
+  }
+  .boton-seguir {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: white;
+  background-color: #b93e3e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boton-seguir:hover {
+  background-color: #d34646;
+}
+</style>
+</head>
+<body>
+<div class="carta">
+  <h1>Mi negra bella</h1>
+  <p>
+  Hola, antes que nada quiero decirle que hacer esto es muy lindo para mí, el simple hecho de saber que estoy aquí haciendo algo para usted, me llena completamente. Con usted no hay dias malos, ni días aburridos, porque usted es tan linda, tan única que siempre tiene algo nuevo por decir que hace imposible que pueda aburrirme, a eso sumarle las ganas que siempre tengo de hablarle. Aunque me encantaría escribirle un millón de cosas, no quiero que se aburra con tanto texto, entonces quiero hacer algo diferente...
+  </p>
+  <a href="tu-nueva-pagina.html" class="enlace-boton">
+  <button class="boton-seguir">Seguir</button>
+  </a>
+</div>
+<div class="corazon" style="left: 10%; animation-delay: 0s;"></div>
+<div class="corazon" style="left: 20%; animation-delay: 1s;"></div>
+<div class="corazon" style="left: 30%; animation-delay: 2s;"></div>
+<div style="text-align: center; margin-top: 20px;">
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carta = document.querySelector('.carta');
+    carta.style.opacity = '1';
+    carta.style.transform = 'translateY(0)';
+  });
+</script>
+</body>
+</html>
